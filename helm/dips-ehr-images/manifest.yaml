@@ -4,6 +4,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: thor-dips-ehr-images
+  namespace: thor
   labels:
     helm.sh/chart: dips-ehr-images-1.0.0
     app.kubernetes.io/name: dips-ehr-images
@@ -16,6 +17,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: thor-dips-ehr-images
+  namespace: thor
   labels:
     helm.sh/chart: dips-ehr-images-1.0.0
     app.kubernetes.io/name: dips-ehr-images
@@ -38,6 +40,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: thor-dips-ehr-images
+  namespace: thor
   labels:
     helm.sh/chart: dips-ehr-images-1.0.0
     app.kubernetes.io/name: dips-ehr-images
@@ -118,6 +121,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: "thor-dips-ehr-images-test-connection"
+  metadata: thor
   labels:
     helm.sh/chart: dips-ehr-images-1.0.0
     app.kubernetes.io/name: dips-ehr-images
